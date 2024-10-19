@@ -1,34 +1,50 @@
 @extends('components.layout')
 
-@section('title', 'Welcome Page')
+@section('title', 'LabActs')
 
 @section('content')
-    <div class="head text-center mb-4">
-        <h2>Welcome to my webpage!</h2>
-        <p>Get to know me!</p>
-    </div>
+<div class="card-grid">
+    
+    @php
+        $cards = [
+            [
+                'title' => 'Setup',
+                'content' => 'Lab Act 1',
+                'image' => 'Lab1.png',
+                'link' => 'https://github.com/geky777/Laravel1stLabAct'
+            ],
 
-    <a href="{{ url('/Content') }}">
-        <div class="section">
-            <i class="bi bi-arrow-right icon"></i>
-            <h2>Introduction</h2>
-            <p>Hello There! On this page, you will see an introduction about myself.</p>
+            [
+                'title' => 'Routes',
+                'content' => 'Lab Act 2',
+                'image' => 'Lab2.png',
+                'link' => 'https://github.com/jaor13/WebDev-Laboratory2'
+            ],
+
+            [
+                'title' => 'Layouts',
+                'content' => 'Lab Act 3',
+                'image' => 'Lab3.png',
+                'link' => 'https://github.com/jaor13/WebDev-Laboratory3'
+            ],
+
+            [
+                'title' => 'Middleware',
+                'content' => 'Lab Act 4',
+                'image' => 'Lab4.png',
+                'link' => 'https://github.com/jaor13/WebDev-Laboratory4'
+            ],
+        ];
+    @endphp
+
+    @foreach ($cards as $card) 
+    <a href="{{ $card['link'] }}" class="card"> 
+        <img src="{{ $card['image'] }}" alt="Card Image">
+        <div class="card-content">
+            <h3 class="card-title">{{ $card['title'] }}</h3>
+            <p class="card-text">{{ $card['content'] }}</p>
         </div>
     </a>
-
-    <a href="{{ url('/Cv') }}">
-        <div class="section">
-            <i class="bi bi-arrow-right icon"></i>
-            <h2>My CV</h2>
-            <p>On this page, you will see my educational background as well as my skills.</p>
-        </div>
-    </a>
-
-    <a href="{{ url('/About') }}">
-        <div class="section">
-            <i class="bi bi-arrow-right icon"></i>
-            <h2>My Social Media Accounts</h2>
-            <p>On this page, you will see all my social media accounts. Come and let's be friends!</p>
-        </div>
-    </a>
+    @endforeach
+</div>
 @endsection

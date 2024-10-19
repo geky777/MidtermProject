@@ -3,9 +3,7 @@
 @section('title', 'Social Media and Gaming Profiles')
 
 @section('content')
-<div class="container mt-5">
-    <h2 class="mb-4">Welcome to my Profiles!</h2>
-
+<div class="container-about mt-5">
     <div class="section-title">Social Media Platforms</div>
     <ul class="list-group">
         <li class="list-group-item">
@@ -48,10 +46,6 @@
         </li>
     </ul>
 
-    <div class="mt-4 text-center">
-        <a href="http://127.0.0.1:8000" class="btn custom-btn">
-            <i class="bi bi-house-door-fill"></i> Home
-        </a>
-    </div>
+    
 </div>
 @endsection
