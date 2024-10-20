@@ -317,12 +317,14 @@
         <div class="navdiv">
             <div class="logo"><a href="{{ url('/') }}">ZarWho</a></div>
                 <ul>
+                    <li><a href="{{ route('lab1') }}">Lab1</a></li>
+                    <li><a href="{{ route('lab2') }}">Lab2</a></li>
+                    <li><a href="{{ route('lab3') }}">Lab3</a></li>
+                    <li><a href="{{ route('lab4') }}">Lab4</a></li>
                     <li><a href="{{ route('about') }}">Socials</a></li>
-                    <li><a href="{{ route('content') }}">ME</a></li>
-                    <li><a href="{{ route('back') }}">LabActs</a></li>
                     <li>
                     <form action="{{ route('ageverification') }}">
-                    <button class="navbar button">CV</button>
+                    <button class="navbar button">Lab Acts</button>
                     </form>
                     </li>
                 </ul>
@@ -336,7 +338,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
+        <p>&copy; 2024 My WebDev Portfolio. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

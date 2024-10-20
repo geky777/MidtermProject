@@ -3,7 +3,9 @@
 @section('title', 'LabActs')
 
 @section('content')
-<div class="card-grid">
+<div class="container-about mt-5">  
+<h2><b>Lab Activities Source Codes </b></h2>
+    <div class="card-grid">
     
     @php
         $cards = [
@@ -46,5 +48,6 @@
         </div>
     </a>
     @endforeach
+    </div>
 </div>
 @endsection

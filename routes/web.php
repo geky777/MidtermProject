@@ -15,27 +15,35 @@ Route::middleware('log.request')->group(function () {
 
         if ($age >= 18) {
             $request->session()->put('age_verified', true); 
-            return redirect()->route('cv'); 
+            return redirect()->route('back'); 
         } else {
             abort(404); 
         }
     });
 
-    Route::get('/Cv', function () {
-        return view('Cv');
-    })->middleware('age.verification')->name('cv'); 
-
-    Route::get('/Content', function () {
-        return view('Content');
-    })->name('content'); 
-
     Route::get('/back', function () {
         return view('back');
-    })->name('back'); 
+    })->middleware('age.verification')->name('back'); 
 
     Route::get('/About', function () {
         return view('About');
     })->name('about'); 
+
+    Route::get('/Lab1', function () {
+        return view('Lab1');
+    })->name('lab1'); 
+
+    Route::get('/Lab2', function () {
+        return view('Lab2');
+    })->name('lab2'); 
+
+    Route::get('/Lab3', function () {
+        return view('Lab3');
+    })->name('lab3'); 
+
+    Route::get('/Lab4', function () {
+        return view('Lab4');
+    })->name('lab4'); 
 
     Route::get('/', function () {
         return view('Home');

@@ -15,9 +15,9 @@
     </a>
     
     <div class="container-home">
-        <h2>Welcome to My Webpage!</h2>
+        <h2>WebDev portfolio Lab Acts 1-4</h2>
         <p>
-            Welcome everyone! This is a brief introduction about what this webpage is about. The problems that I encountered are the following:
+            Welcome everyone! This webpage is my portfolio on lab activities 1-4. The problems that I encountered are the following:
             The proper file path of the SQLite database. When sharing the code and trying to run it on our own PCs and laptops, we tend to encounter issues where the database doesn't exist or the file path is wrong. 
             We have also fixed the `php.ini` file by changing the `variables_order` to "GPCS". But most importantly, I/we learned how to properly use the Laravel framework for our own convenience.
         </p>
